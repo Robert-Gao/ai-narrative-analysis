@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 叙事研究"
+  short_description: "分析媒体、企业与公众的 AI 叙事，建立可追溯编码并设计受众效果研究"
+  default_prompt: "使用 $ai-narrative-analysis，结合我的研究问题和材料，分析 AI 叙事的建构方式，并在需要时设计受众效果研究。"
