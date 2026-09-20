@@ -36,9 +36,9 @@ npx skills add Robert-Gao/ai-narrative-analysis --skill ai-narrative-analysis -g
 ```bash
 brew install gh
 gh auth login --hostname github.com --git-protocol https --web
-mkdir -p "$HOME/Documents/Codex"
-git clone https://github.com/Robert-Gao/ai-narrative-analysis.git "$HOME/Documents/Codex/ai-narrative-analysis"
-cd "$HOME/Documents/Codex/ai-narrative-analysis"
+mkdir -p "$HOME/Library/Application Support/AI Narrative Sync"
+git clone https://github.com/Robert-Gao/ai-narrative-analysis.git "$HOME/Library/Application Support/AI Narrative Sync/repository"
+cd "$HOME/Library/Application Support/AI Narrative Sync/repository"
 python3 tools/install-macos.py
 ```
 
@@ -63,7 +63,7 @@ launchctl print "gui/$(id -u)/org.robergao.ai-narrative-sync"
 
 ```bash
 python3 "$HOME/Library/Application Support/AI Narrative Sync/sync.py" \
-  --repo "$HOME/Documents/Codex/ai-narrative-analysis" \
+  --repo "$HOME/Library/Application Support/AI Narrative Sync/repository" \
   --state "$HOME/Library/Application Support/AI Narrative Sync" --resume
 ```
 

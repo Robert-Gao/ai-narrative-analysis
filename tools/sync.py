@@ -28,7 +28,7 @@ def git(repo, *args, check=True):
     if check and result.returncode:
         # Avoid storing remote URLs, tokens or diff contents in logs.
         raise RuntimeError('Git %s failed (exit %s); inspect manually in the repository.' %
-                           (args[0], result.returncode))
+                           (args[0], result.returncode) + ' ' + re.sub(r'https://[^ ]+', '[remote]', result.stderr)[:300])
     return result
 
 
