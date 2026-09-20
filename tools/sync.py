@@ -12,7 +12,7 @@ import subprocess
 import time
 
 PUBLIC_FILES = {'SKILL.md', 'README.md', 'LICENSE', 'CITATION.cff', 'agents/openai.yaml'}
-REMOTE = 'https://github.com/RoberGao-hub/ai-narrative-analysis.git'
+REMOTE = 'https://github.com/Robert-Gao/ai-narrative-analysis.git'
 
 
 def allowed(name):

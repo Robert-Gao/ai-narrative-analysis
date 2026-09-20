@@ -3,7 +3,7 @@ message: "引用本 Skill 时请同时记录使用的 Git commit。"
 title: "AI Narrative Analysis: AI 叙事分析与受众效果研究 Skill"
 type: software
 authors:
-  - name: "RoberGao-hub"
-    website: "https://github.com/RoberGao-hub"
-repository-code: "https://github.com/RoberGao-hub/ai-narrative-analysis"
+  - name: "Robert-Gao"
+    website: "https://github.com/Robert-Gao"
+repository-code: "https://github.com/Robert-Gao/ai-narrative-analysis"
 license: MIT

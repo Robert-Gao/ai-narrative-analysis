@@ -21,10 +21,10 @@ gh = shutil.which('gh')
 if not gh:
     sys.exit('Install GitHub CLI first: brew install gh')
 login = subprocess.check_output([gh, 'api', 'user', '--jq', '.login'], text=True).strip()
-if login != 'RoberGao-hub':
-    sys.exit('Log in as RoberGao-hub before enabling maintainer synchronization.')
+if login != 'Robert-Gao':
+    sys.exit('Log in as Robert-Gao before enabling maintainer synchronization.')
 subprocess.run([gh, 'auth', 'setup-git', '--hostname', 'github.com'], check=True)
-for field, value in [('user.name', login), ('user.email', '325624277+RoberGao-hub@users.noreply.github.com')]:
+for field, value in [('user.name', login), ('user.email', '325624277+Robert-Gao@users.noreply.github.com')]:
     if subprocess.run(['git', '-C', str(repo), 'config', '--get', field], capture_output=True).returncode:
         subprocess.run(['git', '-C', str(repo), 'config', '--local', field, value], check=True)
 app = Path.home() / 'Library/Application Support/AI Narrative Sync'
@@ -35,7 +35,7 @@ plist.parent.mkdir(parents=True, exist_ok=True)
 domain = 'gui/' + str(os.getuid())
 subprocess.run(['launchctl', 'bootout', domain + '/' + label], capture_output=True)
 shutil.copy2(repo / 'tools/sync.py', app / 'sync.py')
-skill = Path.home() / '.codex/skills/ai-narrative-analysis'
+skill = Path.home() / '.agents/skills/ai-narrative-analysis'
 skill.parent.mkdir(parents=True, exist_ok=True)
 if skill.is_symlink() and skill.resolve() == repo:
     pass

@@ -5,7 +5,7 @@
 ## 安装与使用
 
 ```bash
-npx skills add RoberGao-hub/ai-narrative-analysis --skill ai-narrative-analysis -g -y
+npx skills add Robert-Gao/ai-narrative-analysis --skill ai-narrative-analysis -g -y
 ```
 
 在支持 Skills 的助手中使用：
@@ -31,20 +31,20 @@ npx skills add RoberGao-hub/ai-narrative-analysis --skill ai-narrative-analysis 
 
 这会将此仓库的 Skill 和说明文件改动自动公开到 GitHub。不要在发布文件中放原始访谈、受试者信息、密码或未公开研究材料。代码有文件白名单和有限凭据检查，但不能自动识别所有私人信息。
 
-每台 Mac 各执行一次；需要 macOS、Python 3.9+、Git、GitHub CLI，以及 RoberGao-hub 的账户权限：
+每台 Mac 各执行一次；需要 macOS、Python 3.9+、Git、GitHub CLI，以及 Robert-Gao 的账户权限：
 
 ```bash
 brew install gh
 gh auth login --hostname github.com --git-protocol https --web
 mkdir -p "$HOME/Documents/Codex"
-git clone https://github.com/RoberGao-hub/ai-narrative-analysis.git "$HOME/Documents/Codex/ai-narrative-analysis"
+git clone https://github.com/Robert-Gao/ai-narrative-analysis.git "$HOME/Documents/Codex/ai-narrative-analysis"
 cd "$HOME/Documents/Codex/ai-narrative-analysis"
 python3 tools/install-macos.py
 ```
 
 若同名目录已经存在，先查看其内容，不重复克隆或覆盖。若 Python 不可用，安装 Python 后再运行安装器。GitHub 的网页/插件登录与本机 CLI 登录相互独立。
 
-安装器会备份现有全局 Skill，并将 `~/.codex/skills/ai-narrative-analysis` 链接到本地仓库。不会修改其他 Skills。维护者应通过 Git 工作副本更新，避免再用 Skills CLI 覆盖此链接。
+安装器会备份现有全局 Skill，并将 `~/.agents/skills/ai-narrative-analysis` 链接到本地仓库。不会修改其他 Skills。维护者应通过 Git 工作副本更新，避免再用 Skills CLI 覆盖此链接。
 
 后台每 30 秒运行一次。文件稳定至少 30 秒后自动提交，获取远端、尝试合并并推送；通常为约 30–60 秒加网络耗时，另一台再等待一次轮询，不承诺严格实时。仅登录会话中运行，睡眠或断网后恢复同步。
 
@@ -81,4 +81,4 @@ launchctl bootout "gui/$(id -u)/org.robergao.ai-narrative-sync"
 
 论文或报告请记录所用 commit（`git rev-parse HEAD`）、模型版本、提示词、人工修改及材料范围。滚动更新的 main 不等同于固定研究版本。欢迎通过 Issues 报告方法边界，通过 Pull Requests 提议改进；提交前运行 `python3 -m unittest discover -s tests`。
 
-初稿由 RoberGao-hub 与 AI 助手协作编写；方法参考在相应文件中列出。引用信息见 [CITATION.cff](CITATION.cff)。MIT 许可证适用于本仓库原创内容；链接的外部文献不属于本仓库许可范围。
+初稿由 Robert-Gao 与 AI 助手协作编写；方法参考在相应文件中列出。引用信息见 [CITATION.cff](CITATION.cff)。MIT 许可证适用于本仓库原创内容；链接的外部文献不属于本仓库许可范围。
