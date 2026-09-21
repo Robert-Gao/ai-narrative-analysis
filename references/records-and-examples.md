@@ -23,6 +23,18 @@
 - `review_status`：模型建议 / 人工复核 / 保留争议等；未复核不得冒充人工确认。
 - 引语必须与定位处一致；省略符号或翻译明确标注，保留原文。
 
+## 多主体表达与关系记录
+
+用于跨主体主张分析；普通单文本任务无需建立全部表。定义与判定规则见 [multi-actor-claims.md](multi-actor-claims.md)。
+
+- 主体：`actor_id, actor_type, identity_evidence`；组织、角色和国家关联按表达时点记录。
+- 表达：`occurrence_id, document_id, actor_id, event_id, argument_group_id, organization_at_time, speaking_capacity, country_link_and_basis, expression_mode, exact_quote, locator, claim_id, evidence_status, review_status`。
+- 命题归并：`claim_id, occurrence_id, equivalence_basis, reviewer, review_status`；实质变义不并为同一命题。
+- 关系：`relation_id, from_occurrence_id, to_occurrence_id, target_description, relation_type, target_match, evidence_quote, locator, temporal_basis, review_status`。方向为回应／转述表达指向被回应表达。
+- 可选采用观察：`claim_id, outlet_id, event_window, eligibility_basis, observed_adoption, access_status`。未出现不是表达记录，也不证明主动拒绝。
+
+关系目标未定位时保留描述，不虚构目标 ID。文件台账补充 `discovery_route, version, original_channel`，并保留发布者与发言者区别。
+
 ## 实验衔接表
 
 `dimension, corpus_evidence_ids, construct_definition, manipulation, condition_id, stimulus_id, stimulus_version, controlled_features, possible_confounds, manipulation_check, primary_outcome, planned_contrast`

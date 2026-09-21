@@ -20,6 +20,7 @@ npx skills add Robert-Gao/ai-narrative-analysis --skill ai-narrative-analysis -g
 
 - [SKILL.md](SKILL.md)：范围、核心判断、工作分流与技能协作。
 - [语料与编码](references/corpus-and-coding.md)：抽样边界、候选维度、方法一致性、人工复核。
+- [多主体主张与安全建构](references/multi-actor-claims.md)：高管、政治人物、意见领袖等的公开表达、主张关系及配对编码。
 - [受众效果](references/audience-effects.md)：操纵、刺激材料、预试、样本量与推断边界。
 - [记录与示例](references/records-and-examples.md)：台账、编码字段、反讽与引述等边界情形。
 
